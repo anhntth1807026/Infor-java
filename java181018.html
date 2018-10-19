@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Check your favourite game</title>
+    <style>
+        body {
+            font-family: Tahoma;
+        }
+        .form-group {
+            padding: 15px;
+            margin: 10px;
+        }
+        .form-group img {
+            width: 70px;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <form action="#" name="favourite-form">
+        <fieldset>
+            <legend><h1>Please choose game as you like playing</h1></legend>
+            <div class="form-group">
+                <input class="check-favour" type="checkbox" name="favourite[]" value="lol">
+                <img src="https://vignette.wikia.nocookie.net/logopedia/images/8/86/League_of_legends_logo_transparent.png" alt="LOL">
+                LOL
+            </div>
+            <div class="form-group">
+                <input class="check-favour" type="checkbox" name="favourite[]" value="diablo 3">
+                <img src="https://vignette.wikia.nocookie.net/logopedia/images/2/25/Diablo_III_Reaper_of_Souls.png" alt="Diablo III">
+                Diablo III
+            </div>
+            <div class="form-group">
+                <input class="check-favour" type="checkbox" name="favourite[]" value="diablo 2">
+                <img src="http://icons.iconarchive.com/icons/th3-prophetman/game/256/Diablo-II-icon.png" alt="Diablo II">
+                Diablo II
+            </div>
+            <div class="form-group">
+                <input class="check-favour" type="checkbox" name="favourite[]" value="tomb raider">
+                <img src="https://banner2.kisspng.com/20180326/ziq/kisspng-rise-of-the-tomb-raider-lara-croft-playstation-tomb-raider-5ab96c1c691e25.7030671915221012764306.jpg" alt="Tomb raider">
+                Tomb raider
+            </div>
+            <div class="form-group">
+                <input class="check-favour" type="checkbox" name="favourite[]" value="final fantasy">
+                <img src="https://cdn2-www.playstationlifestyle.net/assets/uploads/2012/02/final-fantasy-x-logo-feature.jpg" alt="Final Fantasy X">
+                Final Fantasy X
+            </div>
+            <div class="form-group">
+                <input class="check-favour" type="checkbox" name="favourite[]" value="starcraft">
+                <img src="http://actscoworking.com/wp-content/uploads/2017/08/starcraft_ii_inspired_font__by_rufferv2k-d3hofsb.jpg" alt="Starcraft">
+                Starcraft
+            </div>
+            <div class="form-group">
+                <input class="check-favour" type="checkbox" name="favourite[]" value="starcraft-2">
+                <img src="https://static.starcraft2.com/dist/images/global/logos/img-sc2-logo--small.png" alt="Starcraft II">
+                Starcraft II
+            </div>
+            <div class="form-group">
+                <input class="check-favour" type="checkbox" name="favourite[]" value="age-of-empires">
+                <img src="http://taigamemienphi.com.vn/upload/images/aoe-logo-2014-05-24.jpg" alt="Age of Empires">
+                Age of Empires
+            </div>
+            <div class="form-group">
+                <input class="check-favour" type="checkbox" name="favourite[]" value="pikachu">
+                <img src="https://seeklogo.com/images/P/pikachu-logo-42CAFBCD00-seeklogo.com.png" alt="Pikachu">
+                Pikachu
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Show It" name="btn-submit">
+                <input type="reset" value="Do it again" name="btn-reset" onclick="tai_lai_trang()">
+            </div>
+        </fieldset>    
+    </form>
+    <script>
+    var btn = document.forms["favourite-form"]["btn-submit"];
+    btn.onclick = function () {
+    var checkbox = document.forms["favourite-form"]["favourite[]"];
+    var result = "";
+    for (var i = 0; i < checkbox.length; i++) {
+        if (checkbox[i].checked == true) {
+            result += checkbox[i].value + " ";
+        }
+    }
+    alert("Your favourite game: " + result);
+    }
+    function tai_lai_trang(){
+        location.reload();
+    }
+    </script>
+</body>
+</html>
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Check your favourite game</title>
+    <style>
+        .form-group {
+            padding: 15px;
+            margin: 10px;
+        }
+
+        .form-group img {
+            width: 70px;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+<form action="#">
+    <fieldset>
+        <legend><h1>Please choose game as you like playing</h1></legend>
+        <div class="form-group">
+            <input class="check-favour" type="checkbox" name="favourite[]" value="lol" id="chkLOL">
+            <label for="chkLOL">LOL</label>
+            <img src="https://vignette.wikia.nocookie.net/logopedia/images/8/86/League_of_legends_logo_transparent.png" alt="LOL">
+        </div>
+        <div class="form-group">
+            <input class="check-favour" type="checkbox" name="favourite[]" value="diablo 3" id="chkDiablo-III">
+            <label for="chkDiablo-III">Diablo III</label>
+            <img src="https://vignette.wikia.nocookie.net/logopedia/images/2/25/Diablo_III_Reaper_of_Souls.png" alt="Diablo III">
+        </div>
+        <div class="form-group">
+            <input class="check-favour" type="checkbox" name="favourite[]" value="diablo 2" id="chkDiablo-II">
+            <label for="chkDiablo-II">Diablo II</label>
+            <img src="http://icons.iconarchive.com/icons/th3-prophetman/game/256/Diablo-II-icon.png" alt="Diablo II">
+        </div>
+        <div class="form-group">
+            <input class="check-favour" type="checkbox" name="favourite[]" value="tomb raider" id="chkTomb-raider">
+            <label for="chkTomb-raider">Tomb raider</label>
+            <img src="https://banner2.kisspng.com/20180326/ziq/kisspng-rise-of-the-tomb-raider-lara-croft-playstation-tomb-raider-5ab96c1c691e25.7030671915221012764306.jpg" alt="Tomb raider">
+        </div>
+        <div class="form-group">
+            <input class="check-favour" type="checkbox" name="favourite[]" value="final fantasy" id="chkFinal-Fantasy-X">
+            <label for="chkFinal-Fantasy-X">Final Fantasy X</label>
+            <img src="https://cdn2-www.playstationlifestyle.net/assets/uploads/2012/02/final-fantasy-x-logo-feature.jpg" alt="Final Fantasy X">
+        </div>
+        <div class="form-group">
+            <input class="check-favour" type="checkbox" name="favourite[]" value="starcraft" id="chkStarcraft">
+            <label for="chkStarcraft">Starcraft</label>
+            <img src="http://actscoworking.com/wp-content/uploads/2017/08/starcraft_ii_inspired_font__by_rufferv2k-d3hofsb.jpg" alt="Starcraft">
+        </div>
+        <div class="form-group">
+            <input class="check-favour" type="checkbox" name="favourite[]" value="starcraft-2" id="chkStarcraft-II">
+            <label for="chkStarcraft-II">Starcraft II</label>
+            <img src="https://static.starcraft2.com/dist/images/global/logos/img-sc2-logo--small.png" alt="Starcraft II">
+        </div>
+        <div class="form-group">
+            <input class="check-favour" type="checkbox" name="favourite[]" value="age-of-empires" id="chkAge-of-Empires">
+            <label for="chkAge-of-Empires">Age of Empires</label>
+            <img src="http://taigamemienphi.com.vn/upload/images/aoe-logo-2014-05-24.jpg" alt="Age of Empires">
+        </div>
+        <div class="form-group">
+            <input class="check-favour" type="checkbox" name="favourite[]" value="pikachu" id="chkPikachu">
+            <label for="chkPikachu">Pikachu</label>
+            <img src="https://seeklogo.com/images/P/pikachu-logo-42CAFBCD00-seeklogo.com.png" alt="Pikachu">
+        </div>
+        <div class="form-group">
+            <input type="submit" value="Show It" name="btn-submit">
+            <input type="reset" value="Do it again" name="btn-reset" onclick="tai_lai_trang()">
+        </div>
+    </fieldset>
+</form>
+<div id="output"></div>
+<script>
+    function displayOnAlert() {
+        var chkLOL = document.getElementById("chkLOL");
+        var chkDiabloIII = document.getElementById("chkDiablo-III");
+        var chkDiabloII = document.getElementById("chkDiablo-II");
+        var chkTombraider = document.getElementById("chkTombraider");
+        var chkFinalFantasyX = document.getElementById("chkFinal-Fantasy-X");
+        var chkStarcraft = document.getElementById("chkStarcraft");
+        var chkStarcraftII = document.getElementById("chkStarcraft-II");
+        var chkAgeofEmpires = document.getElementById("chkAge-of-Empires");
+        var chkPikachu = document.getElementById("chkPikachu");
+        var output = document.getElementById("output");
+        var result = "<ul> n"
+        if (chkLOL.checked) {
+            result += "<li>" + chkLOL.value + "</li> n";
+        }
+        if (chkDiabloIII.checked) {
+            result += "<li>" + chkDiabloIII.value + "</li> n";
+        }
+        if (chkDiabloII.checked) {
+            result += "<li>" + chkDiabloII.value + "</li> n";
+        }
+        if (chkTombraider.checked) {
+            result += "<li>" + chkTombraider.value + "</li> n";
+        }
+        if (chkFinalFantasyX.checked) {
+            result += "<li>" + chkFinalFantasyX.value + "</li> n";
+        }
+        if (chkStarcraft.checked) {
+            result += "<li>" + chkStarcraft.value + "</li> n";
+        }
+        if (chkStarcraftII.checked) {
+            result += "<li>" + chkStarcraftII.value + "</li> n";
+        }
+        if (chkAgefEmpires.checked) {
+            result += "<li>" + chkAgeofEmpires.value + "</li> n";
+        }
+        if (chkPikachu.checked) {
+            result += "<li>" + chkPikachu.value + "</li> n";
+        }
+        result += "</ul> n"
+        output.innerHTML = result;
+        alert("Game have been choosed:" + result);
+    }
+    function tai_lai_trang(){
+        location.reload();
+    }
+</script>
+</body>
+</html>
+ -->
