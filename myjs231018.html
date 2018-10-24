@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Beautiful Girl</title>
+    <style type="text/css">
+        * {
+            box-sizing: border-box;
+        }
+
+        .personal-infor {
+            display: inline-block;
+            width: 30%;
+            border: 1px solid crimson;
+            border-radius: 7px;
+            margin: 10px;
+        }
+
+        .personal-infor .avatar {
+            width: 100%;
+            height: 300px;
+            border-radius: 7px;
+        }
+
+        .line-infor:after {
+            content: '';
+            clear: both;
+            display: table;
+        }
+
+        label {
+            float: left;
+            font-weight: bold;
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+<div class="main-content">
+    <script>
+        var student1 = {
+            avatar : 'https://www.bestpersonnel.ie/wp-content/uploads/2017/11/Sani-Sebastian.png',
+            rollNumber : 'A0001',
+            name : 'Nguyễn Tuấn Anh',
+            birthday : '23/06/2000',
+            address : 'Vũ Tông Phan',
+            phone : '0147852369',
+        };
+
+        var student2 = {
+            avatar : 'http://icons-for-free.com/free-icons/png/512/748990.png',
+            rollNumber : 'A0002',
+            name : 'Nguyễn Tuấn Anh',
+            birthday : '24/06/2000',
+            address : 'Nguyễn Trãi',
+            phone : '0147852368',
+        };
+
+        var student3 = {
+            avatar : 'https://icon-icons.com/icons2/582/PNG/512/wonder-women_icon-icons.com_55030.png',
+            rollNumber : 'A0003',
+            name : 'Nguyễn Tuấn Anh',
+            birthday : '25/06/2000',
+            address : 'Cầu Giấy',
+            phone : '0147852367',
+        };
+
+        var student4 = {
+            avatar : 'https://image.flaticon.com/icons/png/512/194/194933.png',
+            rollNumber : 'A0004',
+            name : 'Nguyễn Tuấn Anh',
+            birthday : '26/06/2000',
+            address : 'Tôn Thất Tùng',
+            phone : '0147852366',
+        };
+
+        var student5 = {
+            avatar : 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtnv7yUxf1JSU1AzYAzrLOAnNIPgYatf8_mD8NR2KFL3Jq_mmj',
+            rollNumber : 'A0005',
+            name : 'Nguyễn Tuấn Anh',
+            birthday : '27/06/2000',
+            address : 'Hào Nam',
+            phone : '0147852365',
+        };
+
+        var student6 = {
+            avatar : 'https://image.flaticon.com/icons/png/512/145/145843.png',
+            rollNumber : 'A0006',
+            name : 'Nguyễn Tuấn Anh',
+            birthday : '28/06/2000',
+            address : 'Yên Lãng',
+            phone : '0147852364',
+        };
+
+        var listStudent = new Array();
+        listStudent.push(student1);
+        listStudent.push(student2);
+        listStudent.push(student3);
+        listStudent.push(student4);
+        listStudent.push(student5);
+        listStudent.push(student6);
+
+        classMainContent = document.getElementsByClassName('main-content');
+        if (classMainContent != null && classMainContent.length > 0) {
+            var mainContent = classMainContent[0];
+            for (var i = 0; i < listStudent.length; i++) {
+                var itemContent = '<div class = "personal-infor">';
+                itemContent += '<div class = "avatar" style = "background-image: url(' + listStudent[i].avatar + '); background-size: cover">';
+                itemContent += '</div>';
+                itemContent += '<div class = "line-infor">';
+                itemContent += '<label>Rollnumber</label>';
+                itemContent += '<div>' + listStudent[i].rollNumber + '</div>';
+                itemContent += '<div class = "line-infor">';
+                itemContent += '<label>Name</label>';
+                itemContent += '<div>' + listStudent[i].name + '</div>';
+                itemContent += '<div class = "line-infor">';
+                itemContent += '<label>Phone</label>';
+                itemContent += '<div>' + listStudent[i].phone + '</div>';
+                itemContent += '<div class = "line-infor">';
+                itemContent += '<label>Address</label>';
+                itemContent += '<div>' + listStudent[i].address + '</div>';
+                itemContent += '</div>';
+                itemContent += '</div>';
+                mainContent.innerHTML += itemContent;
+            }
+        }
+    </script>
+</div>
+</body>
+</html>
